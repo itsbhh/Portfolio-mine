@@ -1,4 +1,4 @@
-My Portfolio. It is developed using React.js.It contains my resume and my experiences.
+My Portfolio. It is developed using React.js. It contains my resume and my experiences.
 
 ![image](https://github.com/user-attachments/assets/4fa532b8-9c21-4041-ac6e-89a7c4bca542)
 
