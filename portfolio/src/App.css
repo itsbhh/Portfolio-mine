@@ -14,7 +14,9 @@
   src: url("./assets/font/CentraNo2-Book.ttf");
   font-weight: 400;
 }
-
+a.no-underline {
+  text-decoration: none;
+}
 /************ Default Css ************/
 * {
   margin: 0;
@@ -93,10 +95,10 @@ p.danger {
   color: red;
 }
 /************ Navbar Css ************/
-/************ Navbar Alignment Fix ************/
+
 nav.navbar {
   display: flex;
-  justify-content: space-between; /* This spaces out the elements */
+  justify-content: space-between; 
   align-items: center;
   position: fixed;
   width: 100%;
@@ -107,13 +109,13 @@ nav.navbar {
 
 nav.navbar .navbar-brand {
   flex: 1;
-  text-align: left; /* Ensure the name is aligned to the left */
+  text-align: left; 
 }
 
 nav.navbar .navbar-nav {
   flex: 2;
   display: flex;
-  justify-content: center; /* Center the links */
+  justify-content: center; 
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -129,7 +131,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-text {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Align the icons to the right */
+  justify-content: flex-end; 
   align-items: center;
 }
 
@@ -155,7 +157,7 @@ nav.navbar .navbar-text {
   transition: color 0.3s ease-in-out;
 }
 /* Optional: Customize navbar collapse to act like a sidebar */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-collapse {
     position: fixed;
     top: 0;
@@ -185,6 +187,7 @@ nav.navbar .navbar-text {
   .social-icon {
     display: inline-block;
     margin-left: 24px;
+    margin-top: 20px;
   }
   .social-icon a .icon {
     color: rgba(250, 245, 245, 0.911);
@@ -968,37 +971,414 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: center;
   min-height: calc(
     100% - 1.75rem
-  ); /* Adjust based on modal header/footer height */
+  );
 }
-
 
 @media (max-width: 767.98px) {
-  /* Bootstrap's sm breakpoint */
+ 
   .nav-pills {
-    justify-content: center; /* Center the tabs on small screens */
+    justify-content: center; 
   }
 }
-@media (max-width: 767.98px) { /* Bootstrap's sm breakpoint */
+@media (max-width: 767.98px) {
+ 
   .nav-pills .nav-link {
-    border-radius: 0; /* Change to square or rectangular shape */
-    padding: 15px; /* Adjust padding for better appearance */
-    text-align: center; /* Center text inside the tab */
+    border-radius: 0; 
+    padding: 15px; 
+    text-align: center; 
   }
   .project .nav.nav-pills {
     width: 100%;
     margin: 0 auto;
     border-radius: 0px !important;
+  }
+  .project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
 }
-.project .nav.nav-pills .nav-link::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  border-radius: 50px;
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
+
+
+/* =========================
+   INNER PILL (matches top pill style, compact)
+   ========================= */
+#inner-pills-tab {
+  gap: 10px;
+  margin: 12px auto 18px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+#inner-pills-tab .nav-link {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #cbd5e1;
+  background: #15171a;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.16s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+#inner-pills-tab .nav-link:hover {
+  background: #24272b;
+  color: #fff;
+}
+
+#inner-pills-tab .nav-link.active {
+  /* gradient like main pill — tweak colors if you want exact match */
+  background: linear-gradient(90deg,#a93aff,#7b3cff);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11,18,32,0.12);
+}
+
+/* keyboard focus */
+#inner-pills-tab .nav-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+}
+
+/* =========================
+   CASE STUDY CARDS (full block)
+   ========================= */
+
+/* card container */
+.case-card {
+  background: #0f1724;
+  color: #e6eef8;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.03);
+  min-height: 500px;               /* fixed desktop height */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+/* card hover: simple white bg + dark text */
+.case-card:hover {
+  background: #ffffff;
+  color: #0b1220;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(11,18,32,0.06);
+  border-color: rgba(0,0,0,0.06);
+}
+
+/* top row (logo + title) */
+.case-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* logo box */
+.case-img-card {
+  background: #ffffff;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: border-color .14s ease, box-shadow .14s ease;
+}
+.case-img-card img {
+  max-width: 84%;
+  max-height: 84%;
+  object-fit: contain;
+  display:block;
+}
+
+/* logo border on hover */
+.case-card:hover .case-img-card {
+  border: 2px solid #0b1220;
+  box-shadow: 0 10px 24px rgba(11,18,32,0.06);
+}
+
+/* title to the right of logo */
+.case-card-title h4 {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 800;  /* bolder title */
+  color: inherit;
+}
+
+/* =========================
+   BODY: description should span full width
+   ========================= */
+
+/* The body stretches horizontally so paragraph uses full width */
+.case-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;       /* occupies available vertical space */
+  align-items: stretch; /* THIS allows paragraph to fill width */
+  padding-top: 6px;
+  box-sizing: border-box;
+}
+
+/* paragraph fills available width and is left-aligned for readability */
+.case-desc {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(230,238,248,0.94);
+}
+
+/* paragraph color on hover (dark text on white bg) */
+.case-card:hover .case-desc {
+  color: #475569;
+}
+
+/* =========================
+   BUTTON (anchor styled as button)
+   - no underline, centered, changes color with card hover
+   ========================= */
+
+/* base button style - used for <a class="case-btn"> or <button class="case-btn"> */
+.case-btn {
+  display: inline-block;
+  text-decoration: none;         /* remove underline */
+  background: #ffffff;           /* white by default */
+  color: #0b1220;
+  border: 1px solid rgba(0,0,0,0.22);
+  padding: 10px 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .14s ease, color .14s ease, transform .14s ease, box-shadow .14s ease;
+  align-self: center;            /* centers horizontally inside stretched body */
+  margin-top: 8px;
+}
+
+/* remove underline in all states (anchor) */
+.case-btn:link,
+.case-btn:visited,
+.case-btn:active {
+  text-decoration: none;
+}
+
+/* focus style for accessibility */
+.case-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+}
+
+/* when the card is hovered, invert button to dark (so it contrasts) */
+.case-card:hover .case-btn {
+  background: #0b1220;
+  color: #ffffff;
+  border-color: #0b1220;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(11,18,32,0.06);
+}
+
+/* slight hover on button itself (if hovered directly) */
+.case-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+   ========================= */
+
+/* medium screens: slightly smaller logo, allow cards to be auto-height */
+@media (max-width: 991.98px) {
+  .case-img-card { width: 120px; height: 120px; }
+  .case-card { min-height: 420px; }
+}
+
+/* small screens: stack layout, full width cards, remove fixed min-height */
+@media (max-width: 767.98px) {
+  #inner-pills-tab { gap: 8px; margin-bottom: 12px; }
+  #inner-pills-tab .nav-link { min-width: 110px; padding: 8px 12px; font-size: 13px; }
+
+  .case-card {
+    min-height: auto;          /* allow height to grow naturally */
+    padding: 14px;
+  }
+
+  .case-card-top {
+    gap: 12px;
+  }
+
+  .case-img-card {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 6px auto;   /* center logo on very small screens */
+  }
+
+  .case-card-top {
+    flex-direction: row;       /* keep logo and title in a row on most phones */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .case-card-title { display: block; }
+  .case-card-title h4 { margin-left: 0; }
+
+  .case-card-body { align-items: stretch; } /* keep paragraph full width */
+  .case-desc { text-align: left; }          /* keep left aligned for readability */
+  .case-btn { align-self: center; }
+}
+/* ============================================
+   FORCE-OVERRIDES for case-study paragraph layout
+   Put this at the END of your projects.css file
+   ============================================ */
+
+/* ensure box sizing predictable */
+.case-card, .case-card * { box-sizing: border-box !important; }
+
+/* make card a normal vertical container and prevent parent centering */
+.case-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;    /* allow children to expand full width */
+  text-align: left !important;
+}
+
+/* ensure top row (logo + title) doesn't constrain body width */
+.case-card-top,
+.case-card-top > * {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* BODY must stretch horizontally — strongest rule */
+.case-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;   /* CRITICAL: lets paragraph fill width */
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 0 0 0 !important;
+  margin: 0 !important;
+}
+
+/* Force the paragraph to fill the available width and remove any centering */
+.case-card-body .case-desc,
+.case-card .case-desc,
+.case-desc {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
+/* ensure title sits on the same top row but does not constrain width */
+.case-card-title {
+  width: calc(100% - 160px) !important; /* leave space for 140px logo + gap */
+  max-width: calc(100% - 160px) !important;
+}
+
+/* logo stays fixed size and won't force layout centering */
+.case-img-card { flex: 0 0 140px !important; }
+
+/* button styles: remove underline for anchor-button and center */
+.case-btn, .case-btn:link, .case-btn:visited {
+  text-decoration: none !important;
+  display: inline-block !important;
+  align-self: center !important;
+}
+
+/* If some global rule uses .text-center on ancestors, stop it here */
+#projects .case-card,
+.section#projects .case-card,
+.project .case-card {
+  text-align: left !important;
+}
+
+/* small-screen tweaks to keep behavior consistent */
+@media (max-width: 767.98px) {
+  .case-card-top { gap: 12px !important; }
+  .case-card-title { width: 100% !important; max-width: 100% !important; }
+  .case-img-card { margin: 0 auto 8px auto !important; }
+  .case-desc { text-align: left !important; }
+}
+/* -------- INNER TABS CLEAN FIX -------- */
+#inner-pills-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f1217;        /* clean dark background */
+  padding: 6px;
+  border-radius: 40px;
+  gap: 6px;
+  width: fit-content;
+  margin: 20px auto 35px auto;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Base tab button */
+#inner-pills-tab .nav-link {
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #d5d5d5;
+  background: transparent !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Active tab — clean white button */
+#inner-pills-tab .nav-link.active {
+  background: #ffffff !important;
+  color: #000 !important;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.15);
+}
+
+/* Hover — soft white round highlight */
+#inner-pills-tab .nav-link:hover:not(.active) {
+  background: rgba(255,255,255,0.08) !important;
+  color: #ffffff;
+  border-radius: 30px;
+}
+#inner-pills-tab .nav-link {
+  padding: 10px 37px !important;
+  font-size: 16px !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  #inner-pills-tab {
+    padding: 4px;
+    gap: 4px;
+  }
+  #inner-pills-tab .nav-link {
+    padding: 7px 18px;
+    font-size: 13px;
+  }
+}
+#inner-pills-tab .nav-link.active {
+  border-radius: 40px !important;     /* perfectly round */
+  overflow: hidden !important;        /* prevents gradient overflow */
 }
