@@ -1,0 +1,36 @@
+.navbar-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* Adjust as needed */
+  }
+  
+  .navbar-link {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #000; /* Change text color on hover */
+  }
+  
+  .social-icon a {
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon a:hover {
+    background-color: #fff; /* White background on hover */
+  }
+  
+  .social-icon .icon {
+    color: #fff; /* Default icon color */
+  }
+  
+  .social-icon a:hover .icon {
+    color: #000; /* Icon turns black on hover */
+  }
+  
+  .navbar.scrolled {
+    background-color: #333; /* Adjust the navbar background color when scrolled */
+  }
+  
