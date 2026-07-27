@@ -30,4 +30,14 @@ import eduwizardImg from "../assets/img/eduwizard.jpg";
 import jobhubImg from "../assets/img/job-hub.png";
 import aviaai from "../assets/img/AviaAI.png";
 
-
+// Project data with links and descriptions
+const initialProjects = [
+  {
+    title: "Skynet Search Engine",
+    description:
+      "AI-integrated searching platform. A group project focused on leveraging AI for search functionalities.",
+    imgUrl: skynetImg,
+    liveDemo: "https://skynet-g6pm.onrender.com/",
+    github: "https://github.com/Twoward-Technologies/Skynet",
+  },
+ 
