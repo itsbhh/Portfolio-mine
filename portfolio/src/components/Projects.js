@@ -40,4 +40,197 @@ const initialProjects = [
     liveDemo: "https://skynet-g6pm.onrender.com/",
     github: "https://github.com/Twoward-Technologies/Skynet",
   },
+  {
+    title: "Avia AI",
+    description:
+      "An AI-powered career and learning assistant offering personalized recommendations using integrated AI models.",
+    imgUrl: aviaai,
+    liveDemo: "https://avia-ai.vercel.app/",
+    github: "https://github.com/itsbhh/Career-Helper/tree/main",
+  },
+  {
+    title: "The Book Store",
+    description:
+      "A comprehensive bookstore application featuring admin and user panels for managing book inventories and user interactions.",
+    imgUrl: bookstoreImg,
+    liveDemo: "https://thebookworld.netlify.app/",
+    github: "https://github.com/itsbhh/bookstore-mern",
+  },
+  {
+    title: "EduWizard-LMS",
+    description:
+      "EduWizard is a powerful and user-friendly E-commerce Learning Management System (LMS) designed to connect instructors and students.",
+    imgUrl: eduwizardImg,
+    liveDemo: "https://eduwizard.netlify.app/",
+    github: "https://github.com/itsbhh/EduWizard-LMS",
+  },
+  {
+    title: "Student Management System",
+    description:
+      "A Java-based application built using modular architecture to handle student records, authentication, and CRUD operations efficiently.",
+    imgUrl:
+      "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+    liveDemo: "#",
+    github: "https://github.com/itsbhh/Student-Management-System",
+  },
+  {
+    title: "Voice Assistant App (Flutter)",
+    description:
+      "A voice-controlled application built with Flutter, integrated APIs for enhanced user interaction.",
+    imgUrl: voiceAssistantImg,
+    liveDemo: "#",
+    github: "https://github.com/itsbhh/Voice-Assistant-Flutter",
+  },
+  {
+    title: "JobHub",
+    description:
+      "A JobHub website made using MERN Stack. It is responsive for every platform. It contains two pannel one for recruiter and one for applicants.",
+    imgUrl: jobhubImg,
+    liveDemo: "https://jobhub12.netlify.app/",
+    github: "https://github.com/itsbhh/JobPortal",
+  },
+  {
+    title: "Zoom Clone App (Flutter)",
+    description:
+      "A clone of the Zoom application created using Flutter, featuring video conferencing capabilities.",
+    imgUrl: zoomCloneImg,
+    liveDemo: "#",
+    github: "https://github.com/itsbhh/Zoom-Clone_Flutter",
+  },
+  {
+    title: "Donation DApp",
+    description:
+      "Donation DApp is a decentralized blockchain-based application that allows users to send donations in the form of Ether.",
+    imgUrl: donationdappImg,
+    liveDemo: "https://donationdapp.netlify.app/",
+    github: "https://github.com/itsbhh/Donation-DApp-Web3",
+  },
+  {
+    title: "Website Design (Figma)",
+    description:
+      "A prototype design of a university website created using Figma, showcasing UI/UX design skills.",
+    imgUrl: websiteDesignImg,
+    liveDemo:
+      "https://drive.google.com/file/d/1xvnkKEeQ2GprApcDSt2jDGuJYMDCPKra/view",
+  },
+  {
+    title: "Blood Bank (MERN)",
+    description:
+      "A MERN stack-based decentralized application for secure and accessible blood donation.",
+    imgUrl: bloodBankImg,
+    liveDemo: "https://bankblood.netlify.app/",
+    github: "https://github.com/itsbhh/Blood-Bank-MERN",
+  },
+  {
+    title: "Social Media Platform (Lovegram)",
+    description:
+      "A social media platform built with the MERN stack, enabling users to post, like, and comment.",
+    imgUrl: lovegramImg,
+    liveDemo: "https://lovegram.netlify.app/",
+    github: "https://github.com/itsbhh/Social-Media",
+  },
+  {
+    title: "Plagiarism Checker",
+    description:
+      "A machine-learning project to detect plagiarism in text using advanced algorithms.",
+    imgUrl: plagiarismCheckerImg,
+    liveDemo: "#", // Add live demo link if available
+    github: "https://github.com/itsbhh/Plagiarism-Checker",
+  },
+  {
+    title: "Language Translation",
+    description:
+      "A machine-learning project that detects the input language and translates it as per user requirements.",
+    imgUrl: languageTranslationImg,
+    liveDemo: "#", // Add live demo link if available
+    github: "https://github.com/itsbhh/Language-Translation",
+  },
+  {
+    title: "Facial Emotion Recognition",
+    description:
+      "A machine learning project for detecting emotions through facial expressions.",
+    imgUrl: facialEmotionRecognitionImg,
+    liveDemo: "#", // Add live demo link if available
+    github:
+      "https://github.com/itsbhh/Facial-Emotion-Recognition-and-Detection",
+  },
+  {
+    title: "Merry Video Call Website",
+    description: "A website featuring video conferencing capabilities.",
+    imgUrl: MerryImg,
+    liveDemo: "https://merry-video-call-website.netlify.app/",
+    github: "https://github.com/itsbhh/Merry-Video-Call-Website",
+  },
+  {
+    title: "Zerodha Website Clone",
+    description: "Zerodha Website Clone.(Currently working on this.)",
+    imgUrl: ZerodhaImg,
+    liveDemo: "#",
+    github: "https://github.com/itsbhh/Zerodha-Clone-Website",
+  },
+  {
+    title: "Weather API",
+    description: "API providing weather forecasts and current conditions.",
+    imgUrl: weatherApiImg,
+    liveDemo: "https://weathrlee.netlify.app/",
+    github: "https://github.com/itsbhh/Weathrlee",
+  },
+  {
+    title: "Image API",
+    description: "API for fetching and managing images.",
+    imgUrl: imageApiImg,
+    liveDemo: "https://imgfetching.netlify.app/?#",
+    github: "https://github.com/itsbhh/Image-Fetcher",
+  },
+  {
+    title: "News API",
+    description: "API providing the latest news headlines and articles.",
+    imgUrl: newsApiImg,
+    liveDemo: "https://news-fetching.netlify.app/",
+    github: "https://github.com/itsbhh/News-Fetcher",
+  },
+  {
+    title: "Mini Projects",
+    description:
+      "Showcasing various functionalities developed in small projects.",
+    imgUrl: codsoftImg,
+    liveDemo: "https://internshipcodsoft.netlify.app/",
+    github: "https://github.com/itsbhh/CODSOFT",
+  },
+  {
+    title: "Gif API",
+    description: "API for searching and retrieving GIFs.",
+    imgUrl: gifApiImg,
+    liveDemo: "https://gifymify.netlify.app/",
+    github: "https://github.com/itsbhh/Gifymify",
+  },
+  {
+    title: "Recipe API",
+    description: "API providing recipes and cooking instructions.",
+    imgUrl: recipeApiImg,
+    liveDemo: "https://recipefetching.netlify.app/",
+    github: "https://github.com/itsbhh/Recipe-Fetching",
+  },
+  {
+    title: "Coffee Shop",
+    description:
+      "Website showcasing a coffee shop with various menu options and features.",
+    imgUrl: coffeeShopImg,
+    liveDemo: "https://flavoredcafe.netlify.app/",
+    github: "https://github.com/itsbhh/Coffeeshop_website",
+  },
+  {
+    title: "Movie Guide API",
+    description: "API for fetching movie details, ratings, and reviews.",
+    imgUrl: movieGuideImg,
+    liveDemo: "https://movieguidy.netlify.app/",
+    github: "https://github.com/itsbhh/Movie-guide",
+  },
+  {
+    title: "To-do MERN",
+    description: "A task management application built using the MERN stack.",
+    imgUrl: todoImg,
+    liveDemo: "https://todo-mern-sage.vercel.app/",
+    github: "https://github.com/itsbhh/TODO-MERN",
+  },
  
