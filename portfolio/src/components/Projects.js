@@ -233,4 +233,68 @@ const initialProjects = [
     liveDemo: "https://todo-mern-sage.vercel.app/",
     github: "https://github.com/itsbhh/TODO-MERN",
   },
- 
+  {
+    title: "To-do Flutter",
+    description: "A task management app built using Flutter.",
+    imgUrl: todoFlutterImg,
+    liveDemo: "#",
+    github: "https://github.com/itsbhh/Flutter-todo",
+  },
+];
+
+export const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalText, setModalText] = useState("");
+
+  const handleShowModal = (text) => {
+    setModalText(text);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => setShowModal(false);
+
+  return (
+    <section className="project" id="projects">
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <h2>Projects</h2>
+                  <p>
+                    <p>
+                      Explore my projects, achievements and experiences in one
+                      place.
+                    </p>
+                  </p>
+
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Nav
+                      variant="pills"
+                      className="nav-pills mb-5 justify-content-center align-items-center flex-column flex-md-row"
+                      id="pills-tab"
+                    >
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">Projects</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">
+                          Experience and Certifications
+                        </Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">Research</Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                    <Tab.Content
+                      id="slideInUp"
+                      className={
+                        isVisible ? "animate__animated animate__slideInUp" : ""
+                      }
+                    
