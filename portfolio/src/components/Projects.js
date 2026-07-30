@@ -297,4 +297,215 @@ export const Projects = () => {
                       className={
                         isVisible ? "animate__animated animate__slideInUp" : ""
                       }
-                    
+                    >
+                      <Tab.Pane eventKey="first">
+                        {/* ============= INNER TABS ============= */}
+                        <Tab.Container defaultActiveKey="case">
+                          <Nav
+                            variant="pills"
+                            className="nav-pills mb-4 justify-content-center align-items-center"
+                            id="inner-pills-tab"
+                          >
+                            <Nav.Item>
+                              <Nav.Link eventKey="case">Case Studies</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="tech">
+                                Technical Projects
+                              </Nav.Link>
+                            </Nav.Item>
+                          </Nav>
+
+                          <Tab.Content>
+                            {/* ========== CASE STUDIES  ========== */}
+                            <Tab.Pane eventKey="case">
+                              <Row className="g-4">
+                                {/* Instagram */}
+                                <Col md={4}>
+                                  <div className="case-card">
+                                    <div className="case-card-body">
+                                      <div className="case-card-top">
+                                        <div className="case-img-card">
+                                          <img
+                                            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                            alt="Instagram"
+                                          />
+                                        </div>
+
+                                        <div className="case-card-title">
+                                          <h4>
+                                            Instagram : Interest-Based Feed
+                                          </h4>
+                                        </div>
+                                      </div>
+
+                                      <p className="case-desc">
+                                        This case study explores how Instagram
+                                        ranks user content using interest
+                                        clustering, user behavior patterns,
+                                        session optimization, and feed relevance
+                                        signals. The analysis focuses on
+                                        improving content visibility, enhancing
+                                        recommendation quality, and creating
+                                        more personalized browsing experiences
+                                        for millions of daily active users.
+                                      </p>
+                                    </div>
+
+                                    <a
+                                      href="https://docs.google.com/document/d/1WHl-6G3GDAjnqm0N2wJ002ygsKsHt6B08dHShURZg0o/edit?usp=sharing"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="case-btn"
+                                    >
+                                      View Case Study
+                                    </a>
+                                  </div>
+                                </Col>
+
+                                {/* Uber */}
+                                <Col md={4}>
+                                  <div className="case-card">
+                                    <div className="case-card-body">
+                                      <div className="case-card-top">
+                                        <div className="case-img-card">
+                                          <img
+                                            src="https://1000logos.net/wp-content/uploads/2017/09/Uber-logo.jpg"
+                                            alt="Uber"
+                                          />
+                                        </div>
+
+                                        <div className="case-card-title">
+                                          <h4>Uber for Pets</h4>
+                                        </div>
+                                      </div>
+
+                                      <p className="case-desc">
+                                        This case study introduces a dedicated
+                                        Uber experience for pet travel. It
+                                        focuses on driver training, pet-friendly
+                                        vehicle requirements, seamless
+                                        onboarding, safe-ride protocols,
+                                        verification flows, and comfort-centric
+                                        features that improve reliability while
+                                        enhancing trust between pet owners and
+                                        the transportation ecosystem.
+                                      </p>
+                                    </div>
+
+                                    <a
+                                      href="https://docs.google.com/document/d/1rL9m8Nb11PDUTW8RR1AomOqPVw5Q7WfIuPzNWYh6CM4/edit?usp=sharing"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="case-btn"
+                                    >
+                                      View Case Study
+                                    </a>
+                                  </div>
+                                </Col>
+
+                                {/* Spotify */}
+                                <Col md={4}>
+                                  <div className="case-card">
+                                    <div className="case-card-body">
+                                      <div className="case-card-top">
+                                        <div className="case-img-card">
+                                          <img
+                                            src="https://cdn-icons-png.flaticon.com/512/174/174872.png"
+                                            alt="Spotify"
+                                          />
+                                        </div>
+
+                                        <div className="case-card-title">
+                                          <h4>Spotify for Students</h4>
+                                        </div>
+                                      </div>
+
+                                      <p className="case-desc">
+                                        This concept proposes a student-focused
+                                        Spotify experience offering discounted
+                                        pricing, collaborative campus playlists,
+                                        academic-mood music curation, and
+                                        partner benefits. The goal is to boost
+                                        adoption, increase daily engagement, and
+                                        make Spotify a central part of students’
+                                        study, travel, and social routines.
+                                      </p>
+                                    </div>
+
+                                    <a
+                                      href="https://docs.google.com/document/d/1fLUfyHSWjCK3HSmm0te7aLTlIuPt-bvFVwpWndjuBAc/edit?usp=sharing"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="case-btn"
+                                    >
+                                      View Case Study
+                                    </a>
+                                  </div>
+                                </Col>
+                              </Row>
+                            </Tab.Pane>
+
+                            {/* ========== TECHNICAL PROJECTS ========== */}
+                            <Tab.Pane eventKey="tech">
+                              <Row className="g-3">
+                                {(showAll
+                                  ? initialProjects
+                                  : initialProjects.slice(0, 3)
+                                ).map((project, index) => (
+                                  <Col key={index} xs={12} sm={6} md={4}>
+                                    <div className="proj-imgbx">
+                                      <img
+                                        src={project.imgUrl}
+                                        alt={project.title}
+                                        className="project-img"
+                                      />
+                                      <div className="proj-txtx">
+                                        <h4>{project.title}</h4>
+                                        <p>{project.description}</p>
+
+                                        <div className="project-links">
+                                          {project.liveDemo === "#" ? (
+                                            <span
+                                              onClick={() =>
+                                                handleShowModal(
+                                                  "Live demo not available"
+                                                )
+                                              }
+                                              className="link-text"
+                                            >
+                                              Live Demo
+                                            </span>
+                                          ) : (
+                                            <a
+                                              href={project.liveDemo}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              className="link-text"
+                                            >
+                                              Live Demo
+                                            </a>
+                                          )}
+
+                                          {project.github === "#" ? (
+                                            <span className="link-text">
+                                              GitHub Repo
+                                            </span>
+                                          ) : (
+                                            <a
+                                              href={project.github}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              className="link-text"
+                                            >
+                                              GitHub Repo
+                                            </a>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </Col>
+                                ))}
+                              </Row>
+
+                             
