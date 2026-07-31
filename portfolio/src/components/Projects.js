@@ -508,4 +508,305 @@ export const Projects = () => {
                                 ))}
                               </Row>
 
-                             
+                              {!showAll && (
+                                <div className="text-center mt-3">
+                                  <span
+                                    onClick={() => setShowAll(true)}
+                                    className="show-more"
+                                  >
+                                    Show More ▼
+                                  </span>
+                                </div>
+                              )}
+                              {showAll && (
+                                <div className="text-center mt-3">
+                                  <span
+                                    onClick={() => setShowAll(false)}
+                                    className="show-more"
+                                  >
+                                    Show Less ▲
+                                  </span>
+                                </div>
+                              )}
+                            </Tab.Pane>
+                          </Tab.Content>
+                        </Tab.Container>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="second">
+                        <h3>Experience & Achievements</h3>
+                        <h4>Experience</h4>
+                        <li>
+                          <strong>
+                            Orbitra Technologies | Intern – Founder’s Office
+                            (Strategy & Execution)
+                          </strong>{" "}
+                          | January 2026 – Present
+                        </li>
+                        <ul>
+                          <li>
+                            Working closely with founders on strategy execution,
+                            product operations, and cross-functional
+                            coordination in a travel-tech startup.
+                          </li>
+                          <li>
+                            Supported AI-enabled product and technology
+                            initiatives through workflow optimization,
+                            documentation, and analysis.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>Orbitra Technologies | Product Intern</strong>{" "}
+                          | December 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Analyzed travel agent workflows and researched
+                            AI-driven third-party integrations to improve
+                            operational efficiency.
+                          </li>
+                          <li>
+                            Evaluated technical feasibility, documented
+                            insights, and supported AI-enabled feature planning
+                            for enhanced agent and traveler experience.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            Thales Group | Software Engineering Intern
+                          </strong>{" "}
+                          | June 2025 – August 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Worked on Docker, Java, Quarkus, Cassandra, and
+                            other technologies as part of internship projects.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            Outlook Group | Business Leadership Programme
+                            (Operations Team)
+                          </strong>{" "}
+                          | May 2025 – July 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Analyzed 2+ datasets and performed trendline
+                            analysis to support strategic decision-making.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            University of California, Berkeley | BISP-L&S
+                            (Student Exchange Program)
+                          </strong>{" "}
+                          | Selected in May 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Chosen for the Berkeley International Study Program
+                            in Letters and Science for Fall 2025.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            Snappikart Techlabs | Full Stack Developer
+                          </strong>{" "}
+                          | January 2025 – March 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Developed and maintained 2+ full-stack applications
+                            using modern frameworks.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            GSSoC 24 Extended | Open Source Contributor
+                          </strong>{" "}
+                          | October 2024 – November 2024
+                        </li>
+                        <ul>
+                          <li>
+                            Ranked in the top 6% (237/3,918 contributors).
+                          </li>
+                          <li>Contributed to 5+ active GitHub repositories.</li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            Google Developer Group – SBU | Firebase Expert (Core
+                            Member)
+                          </strong>{" "}
+                          | October 2024 – June 2025
+                        </li>
+                        <ul>
+                          <li>
+                            Resolved build issues and mentored peers in Firebase
+                            integration.
+                          </li>
+                          <li>
+                            Helped organize 3 technical workshops attended by
+                            100+ students.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            Coding Club – Sarala Birla University | Core Member
+                          </strong>{" "}
+                          | September 2024 – Present
+                        </li>
+                        <ul>
+                          <li>
+                            Guided 5+ juniors in DSA fundamentals and debugging
+                            practices.
+                          </li>
+                        </ul>
+
+                        <li>
+                          <strong>
+                            AIRobotics Club – Sarala Birla University | Core
+                            Member
+                          </strong>{" "}
+                          | December 2024 – Present
+                        </li>
+                        <ul>
+                          <li>
+                            Participated in 2+ AI and IoT discussions;
+                            contributed ideas for automation-based projects.
+                          </li>
+                        </ul>
+
+                        <h4>Hackathons</h4>
+                        <ul>
+                          <li>
+                            <strong>Finalist – Clash of Codes v2.0</strong>
+                          </li>
+                          <li>
+                            Participated in 5+ national hackathons: SIH 2025,
+                            Code’N’Clone, Code for Bharat, DoraHacks
+                            Hack-Web3Conf 2024, and more.
+                          </li>
+                        </ul>
+
+                        <h4>Recognition</h4>
+                        <ul>
+                          <li>
+                            <strong>NPTEL Star Category</strong> – Discipline |
+                            Believers | Enthusiasts (May 2025)
+                          </li>
+                        </ul>
+
+                        <h3>Certifications</h3>
+                        <ul>
+                          <li>
+                            <strong>Programming in Java</strong> – NPTEL (Elite
+                            + Gold, Top 2%) (Jan–Apr 2025)
+                          </li>
+                          <li>
+                            <strong>
+                              Fundamentals of Object-Oriented Programming
+                            </strong>{" "}
+                            – NPTEL (Elite + Gold, Top 5%) (Jan–Apr 2025)
+                          </li>
+                          <li>
+                            <strong>
+                              Elements of AI: Basics of Artificial Intelligence
+                            </strong>{" "}
+                            – University of Helsinki (Aug–Sep 2023)
+                          </li>
+                          <li>
+                            <strong>Machine Learning A–Z (Python & R)</strong> –
+                            Udemy (Jun–Jul 2024)
+                          </li>
+                          <li>
+                            <strong>Cloud Computing</strong> – NPTEL (Elite +
+                            Silver) (Jul–Dec 2024)
+                          </li>
+                          <li>
+                            <strong>Google Cloud Computing Foundations</strong>{" "}
+                            – NPTEL (Elite) (Jul–Dec 2024)
+                          </li>
+                          <li>
+                            <strong>Cybersecurity and Privacy</strong> – NPTEL
+                            (Jul–Dec 2024)
+                          </li>
+                          <li>
+                            <strong>Google AI Essentials</strong> – Google (May
+                            2025)
+                          </li>
+
+                          <li>
+                            <strong>
+                              Computer Networks and Internet Protocol
+                            </strong>{" "}
+                            – NPTEL (Jan–Apr 2025)
+                          </li>
+
+                          <li>
+                            <strong>The Joy of Computing using Python</strong> –
+                            NPTEL (Elite) (Jan–Apr 2025)
+                          </li>
+                          <li>
+                            Skill Development Course on Programming Languages
+                            and Data Structures – Sarala Birla University (June
+                            – July 2023)
+                          </li>
+                        </ul>
+
+                        <div style={{ marginTop: "40px" }}>
+                          <p>
+                            For more certificates and hackathon verifications,{" "}
+                            <br />
+                            visit my{" "}
+                            <a
+                              href="https://www.linkedin.com/in/bhawnaanand/details/certifications/"
+                              className="no-underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              LinkedIn Profile
+                            </a>
+                            .
+                          </p>
+                        </div>
+                      </Tab.Pane>
+
+                      <Tab.Pane eventKey="third">
+                        <h3>Research</h3>
+                        <p>Working on research paper.</p>
+                      </Tab.Pane>
+                    </Tab.Content>
+                  </Tab.Container>
+                </div>
+              )}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="Background"
+      />
+
+      {/* Modal for Live Demo Not Available */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <div className="model">
+          <Modal.Header closeButton>
+            <Modal.Title>Live Demo</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{modalText}</Modal.Body>
+        </div>
+      </Modal>
+    </section>
+  );
+};
