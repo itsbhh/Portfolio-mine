@@ -55,4 +55,72 @@ export const Skills = () => {
     { name: "AI & ML", img: meter3 },
   ];
 
- 
+  return (
+    <div>
+      {/* Education Section */}
+      <section className="education" id="education">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="education-bx wow zoomIn">
+                <h2>Education</h2>
+                <div className="education-timeline">
+                  <div className="education-item">
+                    <h5>Sarala Birla University | Ranchi, Jharkhand, India</h5>
+                    <p>
+                      Bachelor of Technology in Computer Science |
+                      Specialization : AI & ML
+                      <br />
+                      CGPA: 8.82 | SGPA: 9.71
+                      <br />
+                      <br />
+                      2022 – 2026 (Expected)
+                    </p>
+                  </div>
+                </div>
+                <h3>Linguistic Skills</h3>
+                <ul>
+                  <li>English | Proficient</li>
+                  <li>Hindi | Proficient</li>
+                  <li>Korean | Elementary</li>
+                  <li>French | Beginner</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="skill" id="skills">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="skill-bx wow zoomIn">
+                <h2>Skills</h2>
+                <p>
+                  A hybrid of Product, Technical, and Analytical skills.
+                  <br /> I conduct user research, define problems, and build
+                  features using data-informed decisions.
+                </p>
+                <Carousel
+                  responsive={responsive}
+                  infinite={true}
+                  className="owl-carousel owl-theme skill-slider"
+                >
+                  {skills.map((skill, index) => (
+                    <div key={index} className="item">
+                      <img src={skill.img} alt="Skill" />
+                      <h5>{skill.name}</h5>
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </section>
+    </div>
+  );
+};
